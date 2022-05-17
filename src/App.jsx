@@ -22,7 +22,7 @@ const App = () => {
       <Router>
         <Switch>
           <Route
-            path="/"
+            path="/portfolio-website"
             element={
               <>
                 <Header />

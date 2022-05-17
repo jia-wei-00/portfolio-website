@@ -38,7 +38,9 @@ body {
   background: var(--color-bg);
   color: var(--color-white);
   line-height: 1.7;
-  background-image: url(../src/assets/icons-bg.png);
+  background-image: url(../src/assets/bg.png);
+  /* background-size: cover;
+  background-repeat: no-repeat; */
 }
 
 /* ================= GENERAL STYLES ================= */
