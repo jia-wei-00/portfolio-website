@@ -6,7 +6,7 @@ import Flip from "react-reveal/Flip";
 
 const Experience = () => {
   return (
-    <section id="skills">
+    <section id="skills" className="scroll-margin">
       <Flip left>
         <h5>What Skills I Have</h5>
         <h2>My Skills</h2>

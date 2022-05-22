@@ -10,7 +10,7 @@ import ME1 from "../glasscard";
 
 const Header = () => {
   return (
-    <Head>
+    <Head id="home">
       <HeaderContainer className="container">
         <Flip left appear>
           <h5>Hello I'm</h5>
@@ -38,8 +38,9 @@ export default Header;
 
 const Head = styled.header`
   height: 100vh;
-  padding-top: 7.6rem;
+  padding-top: 1.5rem;
   overflow: hidden;
+  width: 100%;
 `;
 
 const HeaderContainer = styled.div`

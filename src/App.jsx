@@ -9,6 +9,7 @@ import Testimonials from "./components/testimonials/Testimonials";
 import Contact from "./components/contact/Contact";
 import Footer from "./components/footer/Footer";
 import PageNotFound from "./components/404/PageNotFound";
+import HeadNav from "./components/headNav/HeadNav";
 import {
   BrowserRouter as Router,
   Routes as Switch,
@@ -25,14 +26,15 @@ const App = () => {
             path="/portfolio-website"
             element={
               <>
-                <Header />
+                <HeadNav />
+                {/* <Header /> */}
                 <Nav />
-                <Testimonials />
-                <About />
-                <Experience />
-                <Services />
-                <Portfolio />
-                <Contact />
+                <Testimonials style={{ marginTop: "5rem" }} />
+                <About style={{ marginTop: "5rem" }} />
+                <Experience style={{ marginTop: "5rem" }} />
+                <Services style={{ marginTop: "5rem" }} />
+                <Portfolio style={{ marginTop: "5rem" }} />
+                <Contact style={{ marginTop: "5rem" }} />
                 <Footer />
               </>
             }

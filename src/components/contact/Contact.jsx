@@ -41,7 +41,7 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact">
+    <section id="contact" className="scroll-margin">
       <Flip left>
         <h5>Get In Touch</h5>
         <h2>Contact Me</h2>
@@ -85,13 +85,24 @@ const Contact = () => {
 
         <form ref={form} onSubmit={sendEmail}>
           <Fade right>
-            <input type="text" name="name" placeholder="Your Full Name"></input>
-            <input type="email" name="email" placeholder="Your Email"></input>
+            <input
+              type="text"
+              name="name"
+              placeholder="Your Full Name"
+              required
+            />
+            <input
+              type="email"
+              name="email"
+              placeholder="Your Email"
+              required
+            />
             <textarea
               name="message"
               row="7"
               placeholder="Your Message"
-            ></textarea>
+              required
+            />
           </Fade>
           <Fade right delay={100}>
             <button type="submit" className="btn btn-primary">

@@ -36,7 +36,11 @@ const data = [
 
 const Testimonials = () => {
   return (
-    <section id="testimonials">
+    <section
+      id="education"
+      className="scroll-margin"
+      style={{ marginTop: "5rem" }}
+    >
       <Flip left>
         <h5>Where I Study</h5>
         <h2>Education</h2>
@@ -112,6 +116,10 @@ const Testimonial = styled.article`
       width: 100%;
       height: 100%;
     }
+  }
+
+  & > h5 {
+    font-size: 0.95rem;
   }
 
   & > small {

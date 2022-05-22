@@ -23,6 +23,12 @@
   --container-width-lg: 75%;
   --container-width-md: 86%;
   --container-width-sm: 90%;
+
+  --header: 10rem;
+}
+
+.scroll-margin {
+  scroll-margin-top: calc(var(--header) + 2rem);
 }
 
 html {
@@ -39,8 +45,6 @@ body {
   color: var(--color-white);
   line-height: 1.7;
   background-image: url(../src/assets/bg.png);
-  /* background-size: cover;
-  background-repeat: no-repeat; */
 }
 
 /* ================= GENERAL STYLES ================= */
