@@ -14,17 +14,19 @@ function HeadNav() {
 
   useEffect(() => {
     const header = document.getElementById("myHeader");
-    const sticky = header.offsetHeight;
-    const scrollCallBack = window.addEventListener("scroll", () => {
-      if (window.pageYOffset > sticky) {
-        setSticky(true);
-      } else {
-        setSticky(false);
-      }
-    });
-    return () => {
-      window.removeEventListener("scroll", scrollCallBack);
-    };
+    if (header) {
+      const sticky = header.offsetHeight;
+      const scrollCallBack = window.addEventListener("scroll", () => {
+        if (window.pageYOffset > sticky) {
+          setSticky(true);
+        } else {
+          setSticky(false);
+        }
+      });
+      return () => {
+        window.removeEventListener("scroll", scrollCallBack);
+      };
+    }
   }, [sticky]);
 
   return (

@@ -1,7 +1,8 @@
 import React from "react";
 import profile from "../assets/cartoon.png";
 import styled from "styled-components";
-import { useSpring, animated, config, to } from "react-spring";
+import { animated } from "react-spring";
+import Tilt from "react-parallax-tilt";
 
 const Container = styled(animated.div)`
   background: linear-gradient(var(--color-primary), transparent);
@@ -30,40 +31,17 @@ const StyledH1 = styled.h1`
   font-family: "Gilroy";
 `;
 
-const StyledH3 = styled.h3`
-  line-height: 1.5;
-  letter-spacing: 1.15;
-  font-family: "Gilroy";
-  font-size: 20px;
-`;
-
-const calc = (x, y) => [
-  -(y - window.innerHeight / 2) / 20,
-  (x - window.innerWidth / 2) / 20,
-  1,
-];
-const trans = (x, y, s) =>
-  `perspective(600px) rotateX(${x}deg) rotateY(${y}deg) scale(${s})`;
-
 const GlassCard = () => {
-  const [props, set] = useSpring(() => ({
-    xys: [0, 0, 1],
-    config: config.default,
-  }));
   return (
-    <Container
-      onMouseMove={({ clientX: x, clientY: y }) => set({ xys: calc(x, y) })}
-      onMouseLeave={() => set({ xys: [0, 0, 1] })}
-      style={{
-        transform: to(props.xys, trans),
-      }}
-    >
-      <StyledImg src={profile} />
-      <StyledH1>Leong Jia Wei</StyledH1>
-      <small className="text-light">
-        Coming together is a beginning. Keeping together is progress. Working
-        together is success.
-      </small>
+    <Container>
+      <Tilt>
+        <StyledImg src={profile} />
+        <StyledH1>Leong Jia Wei</StyledH1>
+        <small className="text-light">
+          Coming together is a beginning. Keeping together is progress. Working
+          together is success.
+        </small>
+      </Tilt>
     </Container>
   );
 };

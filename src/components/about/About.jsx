@@ -7,6 +7,7 @@ import { FaDumbbell } from "react-icons/fa";
 import Flip from "react-reveal/Flip";
 import Fade from "react-reveal/Fade";
 import Zoom from "react-reveal/Zoom";
+import Tilt from "react-parallax-tilt";
 
 const About = () => {
   return (
@@ -19,9 +20,11 @@ const About = () => {
       <AboutContainer className="container">
         <Zoom>
           <AboutMe>
-            <AboutMeImg>
-              <img src={ME} alt="About Image" />
-            </AboutMeImg>
+            <Tilt>
+              <AboutMeImg>
+                <img src={ME} alt="About Image" />
+              </AboutMeImg>
+            </Tilt>
           </AboutMe>
         </Zoom>
 
