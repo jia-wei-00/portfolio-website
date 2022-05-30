@@ -1,12 +1,13 @@
 {
   "files": {
     "main.css": "/portfolio-website/static/css/main.80c96d60.css",
-    "main.js": "/portfolio-website/static/js/main.db2acece.js",
+    "main.js": "/portfolio-website/static/js/main.293a0e08.js",
     "static/media/one-piece.png": "/portfolio-website/static/media/one-piece.db225faae9c63ace2064.png",
     "static/media/portfolio3.png": "/portfolio-website/static/media/portfolio3.e85eb5547d8f35705cbd.png",
     "static/media/portfolio1.png": "/portfolio-website/static/media/portfolio1.e9de36785abf2acfe09e.png",
     "static/media/cv.pdf": "/portfolio-website/static/media/cv.066b12a4b1a86bbf34f9.pdf",
-    "static/media/portfolio4.png": "/portfolio-website/static/media/portfolio4.665e5c350f315a404109.png",
+    "static/media/portfolio7.png": "/portfolio-website/static/media/portfolio7.0c283e8d2af8eceefba0.png",
+    "static/media/portfolio4.png": "/portfolio-website/static/media/portfolio4.b146aeb280291fface51.png",
     "static/media/portfolio5.png": "/portfolio-website/static/media/portfolio5.653dfd8ceb931a1c4776.png",
     "static/media/cartoon.png": "/portfolio-website/static/media/cartoon.536acbfe8fd72812a637.png",
     "static/media/portfolio6.png": "/portfolio-website/static/media/portfolio6.1e225bb624ac6605f957.png",
@@ -14,10 +15,10 @@
     "static/media/business.png": "/portfolio-website/static/media/business.c1f2c18939aae9233c07.png",
     "index.html": "/portfolio-website/index.html",
     "main.80c96d60.css.map": "/portfolio-website/static/css/main.80c96d60.css.map",
-    "main.db2acece.js.map": "/portfolio-website/static/js/main.db2acece.js.map"
+    "main.293a0e08.js.map": "/portfolio-website/static/js/main.293a0e08.js.map"
   },
   "entrypoints": [
     "static/css/main.80c96d60.css",
-    "static/js/main.db2acece.js"
+    "static/js/main.293a0e08.js"
   ]
 }
