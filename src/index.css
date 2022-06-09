@@ -27,8 +27,10 @@
   --header: 10rem;
 }
 
-.scroll-margin {
-  scroll-margin-top: calc(var(--header) + 2rem);
+@media screen and (min-width: 1440px) {
+  .scroll-margin {
+    scroll-margin-top: calc(var(--header) + 2rem);
+  }
 }
 
 html {

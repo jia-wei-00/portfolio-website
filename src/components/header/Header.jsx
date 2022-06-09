@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import CTA from "./CTA";
-import ME from "../../assets/one-piece.png";
 import HeaderSocial from "./HeaderSocial";
 import Flip from "react-reveal/Flip";
 import Fade from "react-reveal/Fade";

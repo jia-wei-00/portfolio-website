@@ -23,9 +23,9 @@ function HeadNav() {
           setSticky(false);
         }
       });
-      return () => {
-        window.removeEventListener("scroll", scrollCallBack);
-      };
+      // return () => {
+      //   window.removeEventListener("scroll", scrollCallBack);
+      // };
     }
   }, [sticky]);
 

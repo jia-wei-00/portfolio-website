@@ -6,6 +6,8 @@ import IMG3 from "../../assets/portfolio3.png";
 import IMG4 from "../../assets/portfolio4.png";
 import IMG5 from "../../assets/portfolio5.png";
 import IMG6 from "../../assets/portfolio6.png";
+import IMG7 from "../../assets/portfolio7.png";
+import IMG8 from "../../assets/portfolio8.png";
 import Zoom from "react-reveal/Zoom";
 import Flip from "react-reveal/Flip";
 
@@ -47,6 +49,18 @@ const data = [
     title: "PHP Assessment",
     password: "(Username/Password: admin)",
     demo: "https://webproject1321.000webhostapp.com/index.php",
+  },
+  {
+    id: 7,
+    image: IMG7,
+    title: "Whatsapp Clone",
+    demo: "https://jia-wei-00.github.io/whatsapp-mern/",
+  },
+  {
+    id: 8,
+    image: IMG8,
+    title: "Group Chat App",
+    demo: "https://jia-wei-00.github.io/group_chat_app/",
   },
 ];
 
@@ -117,7 +131,7 @@ const PortfolioItem = styled.article`
   border-radius: 2rem;
   border: 1px solid transparent;
   transition: var(--transition);
-  min-height: 523px;
+  height: 100%;
 
   &:hover {
     border-color: var(--color-primary-variant);
@@ -135,14 +149,6 @@ const PortfolioItem = styled.article`
     & > img {
       max-height: 300px;
     }
-  }
-
-  @media screen and (max-width: 1024px) {
-    min-height: 438px;
-  }
-
-  @media screen and (max-width: 600px) {
-    min-height: unset;
   }
 `;
 
