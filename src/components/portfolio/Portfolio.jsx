@@ -8,6 +8,7 @@ import IMG5 from "../../assets/portfolio5.png";
 import IMG6 from "../../assets/portfolio6.png";
 import IMG7 from "../../assets/portfolio7.png";
 import IMG8 from "../../assets/portfolio8.png";
+import IMG9 from "../../assets/portfolio9.png";
 import Zoom from "react-reveal/Zoom";
 import Flip from "react-reveal/Flip";
 
@@ -61,6 +62,12 @@ const data = [
     image: IMG8,
     title: "Group Chat App",
     demo: "https://jia-wei-00.github.io/group_chat_app/",
+  },
+  {
+    id: 9,
+    image: IMG9,
+    title: "Amazon Clone",
+    demo: "https://jia-wei-00.github.io/amazon-clone/",
   },
 ];
 
