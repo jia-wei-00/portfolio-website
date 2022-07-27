@@ -73,7 +73,7 @@ const data = [
 
 const Portfolio = () => {
   return (
-    <section id="portfolio" className="scroll-margin">
+    <section className="scroll-margin">
       <Flip left>
         <h5>My Recent Work</h5>
         <h2>Portfolio</h2>

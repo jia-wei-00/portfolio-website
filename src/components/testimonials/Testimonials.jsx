@@ -36,11 +36,7 @@ const data = [
 
 const Testimonials = () => {
   return (
-    <section
-      id="education"
-      className="scroll-margin"
-      style={{ marginTop: "5rem" }}
-    >
+    <section className="scroll-margin" style={{ marginTop: "5rem" }}>
       <Flip left>
         <h5>Where I Study</h5>
         <h2>Education</h2>

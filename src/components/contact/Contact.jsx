@@ -41,7 +41,7 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="scroll-margin">
+    <section className="scroll-margin">
       <Flip left>
         <h5>Get In Touch</h5>
         <h2>Contact Me</h2>

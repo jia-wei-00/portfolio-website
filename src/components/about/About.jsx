@@ -11,7 +11,7 @@ import Tilt from "react-parallax-tilt";
 
 const About = () => {
   return (
-    <section id="about" className="scroll-margin">
+    <section className="scroll-margin">
       <Flip bottom>
         <h5>Get To Know</h5>
         <h2>About Me</h2>

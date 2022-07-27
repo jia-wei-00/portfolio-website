@@ -10,6 +10,7 @@ import Contact from "./components/contact/Contact";
 import Footer from "./components/footer/Footer";
 import PageNotFound from "./components/404/PageNotFound";
 import HeadNav from "./components/headNav/HeadNav";
+import { ScrollingProvider, Section } from "react-scroll-section";
 import {
   BrowserRouter as Router,
   Routes as Switch,
@@ -26,16 +27,32 @@ const App = () => {
             path="/portfolio-website"
             element={
               <>
-                <HeadNav />
-                {/* <Header /> */}
-                <Nav />
-                <Testimonials style={{ marginTop: "5rem" }} />
-                <About style={{ marginTop: "5rem" }} />
-                <Experience style={{ marginTop: "5rem" }} />
-                <Services style={{ marginTop: "5rem" }} />
-                <Portfolio style={{ marginTop: "5rem" }} />
-                <Contact style={{ marginTop: "5rem" }} />
-                <Footer />
+                <ScrollingProvider scrollBehavior="smooth">
+                  <Section id="home" style={{ marginTop: "0rem" }}>
+                    <HeadNav />
+                  </Section>
+                  {/* <Header /> */}
+                  <Nav />
+                  <Section id="education">
+                    <Testimonials style={{ marginTop: "5rem" }} />
+                  </Section>
+                  <Section id="about">
+                    <About style={{ marginTop: "5rem" }} />
+                  </Section>
+                  <Section id="skills">
+                    <Experience style={{ marginTop: "5rem" }} />
+                  </Section>
+                  <Section id="experience">
+                    <Services style={{ marginTop: "5rem" }} />
+                  </Section>
+                  <Section id="portfolio">
+                    <Portfolio style={{ marginTop: "5rem" }} />
+                  </Section>
+                  <Section id="contact">
+                    <Contact style={{ marginTop: "5rem" }} />
+                  </Section>
+                  <Footer />
+                </ScrollingProvider>
               </>
             }
           />

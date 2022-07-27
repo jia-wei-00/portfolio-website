@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import Header from "../header/Header";
 import Fade from "react-reveal/Fade";
+import { useScrollSection } from "react-scroll-section";
 import Breakpoint, {
   BreakpointProvider,
   setDefaultBreakpoints,
@@ -10,6 +11,12 @@ import Breakpoint, {
 setDefaultBreakpoints([{ xs: 0 }, { l: 1439 }, { xl: 1440 }]);
 
 function HeadNav() {
+  const homeSection = useScrollSection("home");
+  const aboutSection = useScrollSection("about");
+  const skillSection = useScrollSection("skills");
+  const experienceSection = useScrollSection("experience");
+  const portfolioSection = useScrollSection("portfolio");
+
   const [sticky, setSticky] = useState(false);
 
   useEffect(() => {
@@ -76,44 +83,63 @@ function HeadNav() {
             <ShowNav>
               <ul>
                 <a href="#home">
-                  <li>
+                  <LiInside
+                    onClick={homeSection.onClick}
+                    selected={homeSection.selected}
+                  >
                     <p>1</p>
                     <Fade right>
                       <p>Home</p>
                     </Fade>
-                  </li>
+                  </LiInside>
                 </a>
+
                 <a href="#about">
-                  <li>
+                  <LiInside
+                    onClick={aboutSection.onClick}
+                    selected={aboutSection.selected}
+                  >
                     <p>2</p>
                     <Fade right>
                       <p>About</p>
                     </Fade>
-                  </li>
+                  </LiInside>
                 </a>
+
                 <a href="#skills">
-                  <li>
+                  <LiInside
+                    onClick={skillSection.onClick}
+                    selected={skillSection.selected}
+                  >
                     <p>3</p>
                     <Fade right>
                       <p>Skills</p>
                     </Fade>
-                  </li>
+                  </LiInside>
                 </a>
+
                 <a href="#experience">
-                  <li>
+                  <LiInside
+                    onClick={experienceSection.onClick}
+                    selected={experienceSection.selected}
+                  >
                     <p>4</p>
                     <Fade right>
                       <p>Experience</p>
                     </Fade>
-                  </li>
+                  </LiInside>
                 </a>
+
                 <a href="#portfolio">
-                  <li>
+                  <LiInside
+                    onClick={experienceSection.onClick}
+                    selected={portfolioSection.selected}
+                  >
                     <p>5</p>
                     <Fade right>
-                      <p>portfolio</p>
+                      <p>Portfolio</p>
                     </Fade>
-                  </li>
+                  </LiInside>
                 </a>
               </ul>
             </ShowNav>
@@ -192,19 +218,30 @@ const ShowNav = styled(Nav)`
 
   & > ul {
     & > a > li {
-      & > :first-child {
-        opacity: 0.3;
-        color: black;
-      }
       & > :nth-child(2) {
-        text-transform: capitalize;
         writing-mode: horizontal-tb;
-        transform: unset;
-        font-size: 1rem;
-        position: absolute;
-        margin-top: 3rem;
-        color: white;
       }
     }
+  }
+`;
+
+const LiInside = styled.li`
+  min-width: ${(props) => (props.selected ? "23rem" : "11rem")} !important;
+  background-color: ${(props) => props.selected && "white"} !important;
+
+  & > :first-child {
+    opacity: 0.3;
+    color: black;
+  }
+
+  & > :nth-child(2) {
+    text-transform: capitalize;
+    writing-mode: horizontal-tb;
+    transform: unset;
+    font-size: 1rem;
+    position: absolute;
+    margin-top: 3rem;
+    color: ${(props) => (props.selected ? "black" : "white")};
+    font-weight: ${(props) => props.selected && "900"};
   }
 `;
