@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { AiOutlineHome, AiOutlineUser } from "react-icons/ai";
 import { BiBook, BiMessageSquareDetail } from "react-icons/bi";
 import { RiServiceLine } from "react-icons/ri";
-import { useState } from "react";
+import { useScrollSection } from "react-scroll-section";
 import Breakpoint, {
   BreakpointProvider,
   setDefaultBreakpoints,
@@ -12,44 +12,43 @@ import Breakpoint, {
 setDefaultBreakpoints([{ xs: 0 }, { l: 1439 }, { xl: 1440 }]);
 
 const Nav = () => {
-  const [activeNav, setActiveNav] = useState("#");
+  const homeSection = useScrollSection("home");
+  const aboutSection = useScrollSection("about");
+  const skillSection = useScrollSection("skills");
+  const experienceSection = useScrollSection("experience");
+  const portfolioSection = useScrollSection("portfolio");
 
   return (
     <BreakpointProvider>
       <Breakpoint xs>
         <Navigation>
           <a
-            href="#"
-            onClick={() => setActiveNav("#")}
-            className={activeNav === "#" ? "active" : ""}
+            className={homeSection.selected && "active"}
+            onClick={homeSection.onClick}
           >
             <AiOutlineHome />
           </a>
           <a
-            href="#about"
-            onClick={() => setActiveNav("#about")}
-            className={activeNav === "#about" ? "active" : ""}
+            className={aboutSection.selected && "active"}
+            onClick={aboutSection.onClick}
           >
             <AiOutlineUser />
           </a>
           <a
-            href="#skills"
-            onClick={() => setActiveNav("#skills")}
-            className={activeNav === "#skills" ? "active" : ""}
+            className={skillSection.selected && "active"}
+            onClick={skillSection.onClick}
           >
             <BiBook />
           </a>
           <a
-            href="#experience"
-            onClick={() => setActiveNav("#experience")}
-            className={activeNav === "#experience" ? "active" : ""}
+            className={experienceSection.selected && "active"}
+            onClick={experienceSection.onClick}
           >
             <RiServiceLine />
           </a>
           <a
-            href="#contact"
-            onClick={() => setActiveNav("#contact")}
-            className={activeNav === "#contact" ? "active" : ""}
+            className={portfolioSection.selected && "active"}
+            onClick={portfolioSection.onClick}
           >
             <BiMessageSquareDetail />
           </a>
