@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { FaFacebookF, FaDiscord, FaSteam } from "react-icons/fa";
+import { FaFacebookF, FaDiscord, FaSteam, FaLinkedinIn } from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -47,6 +47,9 @@ const Footer = () => {
           target="_blank"
         >
           <FaDiscord />
+        </a>
+        <a href="https://www.linkedin.com/in/leong-jia-wei-" target="_blank">
+          <FaLinkedinIn />
         </a>
       </Socials>
 

@@ -9,6 +9,8 @@ import IMG6 from "../../assets/portfolio6.png";
 import IMG7 from "../../assets/portfolio7.png";
 import IMG8 from "../../assets/portfolio8.png";
 import IMG9 from "../../assets/portfolio9.png";
+import IMG10 from "../../assets/expense-tracker.png";
+import IMG11 from "../../assets/web-resume.png";
 import Zoom from "react-reveal/Zoom";
 import Flip from "react-reveal/Flip";
 
@@ -16,58 +18,59 @@ const data = [
   {
     id: 1,
     image: IMG1,
-    title: "Final Year Project Mobile Game",
+    title: "Unity Mobile Game",
     preview: "https://jia-wei-00.github.io/Web-Resume/#/tridemic",
     demo: "https://jiawei01.itch.io/tridemic",
   },
   {
     id: 2,
-    image: IMG2,
-    title: "GameFi Project",
-    demo: "https://jia-wei-00.github.io/blockchain/",
+    image: IMG10,
+    title: "Expense Tracker",
+    github: "https://github.com/jia-wei-00/expenses-tracker",
+    password: "(Username: testing@gmail.com, Password: 123456)",
+    demo: "https://expenses-tracker-jia-wei-00.vercel.app/home",
   },
   {
     id: 3,
-    image: IMG3,
-    title: "Tesla Clone",
-    demo: "https://jia-wei-00.github.io/tesla-clone/",
+    image: IMG2,
+    title: "GameFi Project",
+    github: "https://github.com/jia-wei-00/blockchain/",
+    demo: "https://jia-wei-00.github.io/blockchain/",
   },
   {
     id: 4,
-    image: IMG4,
-    title: "Linkedin Clone",
-    demo: "https://jia-wei-00.github.io/linkedin-clone/",
+    image: IMG9,
+    title: "Amazon Clone",
+    github: "https://github.com/jia-wei-00/amazon-clone/",
+    demo: "https://jia-wei-00.github.io/amazon-clone/",
   },
   {
     id: 5,
-    image: IMG5,
-    title: "Old Portfolio",
-    demo: "https://jia-wei-00.github.io/Web-Resume/",
+    image: IMG3,
+    title: "Tesla Clone",
+    github: "https://github.com/jia-wei-00/tesla-clone/",
+    demo: "https://jia-wei-00.github.io/tesla-clone/",
   },
   {
     id: 6,
-    image: IMG6,
-    title: "PHP Assessment",
-    password: "(Username/Password: admin)",
-    demo: "https://webproject1321.000webhostapp.com/index.php",
+    image: IMG4,
+    title: "Linkedin Clone",
+    github: "https://github.com/jia-wei-00/linkedin-clone/",
+    demo: "https://jia-wei-00.github.io/linkedin-clone/",
   },
   {
     id: 7,
-    image: IMG7,
-    title: "Whatsapp Clone",
-    demo: "https://jia-wei-00.github.io/whatsapp-mern/",
+    image: IMG11,
+    title: "Personal Website",
+    github: "https://github.com/jia-wei-00/react-portfolio",
+    demo: "https://jia-wei-portfolio.vercel.app/",
   },
   {
     id: 8,
     image: IMG8,
     title: "Group Chat App",
+    github: "https://github.com/jia-wei-00/group_chat_app/",
     demo: "https://jia-wei-00.github.io/group_chat_app/",
-  },
-  {
-    id: 9,
-    image: IMG9,
-    title: "Amazon Clone",
-    demo: "https://jia-wei-00.github.io/amazon-clone/",
   },
 ];
 
@@ -92,9 +95,13 @@ const Portfolio = () => {
                   <small className="text-light">{data.password}</small>
                 )}
                 <PortfolioItemCta>
-                  {data.preview && (
+                  {data.preview ? (
                     <a href={data.preview} target="_blank" className="btn">
                       Preview
+                    </a>
+                  ) : (
+                    <a href={data.github} target="_blank" className="btn">
+                      Github
                     </a>
                   )}
                   <a
@@ -154,7 +161,7 @@ const PortfolioItem = styled.article`
     overflow: hidden;
 
     & > img {
-      max-height: 300px;
+      height: 250px;
     }
   }
 `;

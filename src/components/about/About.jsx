@@ -34,7 +34,7 @@ const About = () => {
               <AboutCard>
                 <MdOutlineWork />
                 <h5>Experience</h5>
-                <small>Internship Experience</small>
+                <small>Wordpress Developer</small>
               </AboutCard>
 
               <AboutCard>
@@ -51,13 +51,14 @@ const About = () => {
             </AboutCards>
           </Fade>
           <Fade bottom>
-            <p>
-              I'm a fresh graduate degree student of Universiti Utara Malaysia
-              with under course Bachelor of Science with Honours (Multimedia).
-              Talent for translating company vision into a suite of useful
-              graphics and related designs. Motivated Web Designer adept at
-              conceptualizing. Combines accepted best practices with creative
-              innovation to produce beautiful and functional results.
+            <p style={{ textAlign: "justify" }}>
+              I'm a front-end developer who like to create a beautiful websites
+              with great user experience. I can turn design into a real working
+              website with responsive design. I like to build beautiful website
+              as I feel like an achievement after fully complete develop a
+              website. I graduate from Universiti Utara Malaysia with a degree
+              of bachelor of science (multimedia). I am a positive thinker and I
+              think this helps me the most in difficult moments.
             </p>
           </Fade>
 
@@ -188,4 +189,8 @@ const AboutCard = styled.article`
     font-size: 0.7rem;
     color: var(--color-light);
   }
+`;
+
+const Description = styled.p`
+  text-align: justify;
 `;

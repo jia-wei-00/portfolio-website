@@ -16,29 +16,31 @@ const Services = () => {
         <Fade bottom>
           <Service>
             <ServiceHead>
-              <h3>Part time cashier (2017-2018)</h3>
+              <h3>Wordpress Developer</h3>
             </ServiceHead>
 
             <ServiceList>
               <li>
                 <BiCheck />
-                <p>Handle cash, transactions with customers.</p>
+                <p>Build e-commerce and responsive website for SMEs</p>
               </li>
               <li>
                 <BiCheck />
-                <p>Ensure pricing is correct.</p>
+                <p>
+                  Meeting with clients to discuss website design and function.
+                </p>
               </li>
               <li>
                 <BiCheck />
-                <p>Bag, box or wrap packages.</p>
+                <p>Designing and building the website front-end.</p>
               </li>
               <li>
                 <BiCheck />
-                <p>Keep reports of transactions.</p>
+                <p>Generating WordPress themes and plugins.</p>
               </li>
               <li>
                 <BiCheck />
-                <p>Scan goods and collect payments.</p>
+                <p>Convert design to responsive website.</p>
               </li>
             </ServiceList>
           </Service>
