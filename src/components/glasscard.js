@@ -37,10 +37,6 @@ const GlassCard = () => {
       <Tilt>
         <StyledImg src={profile} />
         <StyledH1>Leong Jia Wei</StyledH1>
-        <small className="text-light">
-          Coming together is a beginning. Keeping together is progress. Working
-          together is success.
-        </small>
       </Tilt>
     </Container>
   );

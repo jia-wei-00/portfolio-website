@@ -4,9 +4,6 @@ import IMG1 from "../../assets/portfolio1.png";
 import IMG2 from "../../assets/portfolio2.png";
 import IMG3 from "../../assets/portfolio3.png";
 import IMG4 from "../../assets/portfolio4.png";
-import IMG5 from "../../assets/portfolio5.png";
-import IMG6 from "../../assets/portfolio6.png";
-import IMG7 from "../../assets/portfolio7.png";
 import IMG8 from "../../assets/portfolio8.png";
 import IMG9 from "../../assets/portfolio9.png";
 import IMG10 from "../../assets/expense-tracker.png";
@@ -90,28 +87,30 @@ const Portfolio = () => {
                 <div>
                   <img src={data.image} alt="" />
                 </div>
-                <h3>{data.title}</h3>
-                {data.password && (
-                  <small className="text-light">{data.password}</small>
-                )}
-                <PortfolioItemCta>
-                  {data.preview ? (
-                    <a href={data.preview} target="_blank" className="btn">
-                      Preview
-                    </a>
-                  ) : (
-                    <a href={data.github} target="_blank" className="btn">
-                      Github
-                    </a>
+                <SpaceBetween>
+                  <h3>{data.title}</h3>
+                  {data.password && (
+                    <small className="text-light">{data.password}</small>
                   )}
-                  <a
-                    href={data.demo}
-                    className="btn btn-primary"
-                    target="_blank"
-                  >
-                    Live Demo
-                  </a>
-                </PortfolioItemCta>
+                  <PortfolioItemCta>
+                    {data.preview ? (
+                      <a href={data.preview} target="_blank" className="btn">
+                        Preview
+                      </a>
+                    ) : (
+                      <a href={data.github} target="_blank" className="btn">
+                        Github
+                      </a>
+                    )}
+                    <a
+                      href={data.demo}
+                      className="btn btn-primary"
+                      target="_blank"
+                    >
+                      Live Demo
+                    </a>
+                  </PortfolioItemCta>
+                </SpaceBetween>
               </PortfolioItem>
             );
           })}
@@ -161,7 +160,7 @@ const PortfolioItem = styled.article`
     overflow: hidden;
 
     & > img {
-      height: 250px;
+      height: 200px;
     }
   }
 `;
@@ -174,4 +173,10 @@ const PortfolioItemCta = styled.div`
   & > a {
     margin-top: 2rem;
   }
+`;
+
+const SpaceBetween = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 `;

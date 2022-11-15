@@ -207,6 +207,13 @@ const Nav = styled.div`
         min-width: 35rem;
         filter: saturate(20%);
       }
+
+      @media (max-width: 1600px) {
+        &:hover {
+          min-width: 20rem;
+          filter: saturate(20%);
+        }
+      }
     }
   }
 `;
