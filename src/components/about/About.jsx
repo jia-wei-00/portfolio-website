@@ -52,12 +52,12 @@ const About = () => {
           </Fade>
           <Fade bottom>
             <p style={{ textAlign: "justify" }}>
-              I'm a front-end developer who like to create a beautiful websites
-              with great user experience. I can turn design into a real working
-              website with responsive design. I like to build beautiful website
-              as I feel like an achievement after fully complete develop a
-              website. I graduate from Universiti Utara Malaysia with a degree
-              of bachelor of science (multimedia). I am a positive thinker and I
+              I'm a front-end developer who likes to create beautiful websites
+              with a great user experience. I can turn a design into a real
+              working website with responsive design. I enjoy creating beautiful
+              websites because it feels like an accomplishment to complete one.
+              I graduated from Universiti Utara Malaysia with a degree in
+              bachelor of science (multimedia). I am a positive thinker, and I
               think this helps me the most in difficult moments.
             </p>
           </Fade>
